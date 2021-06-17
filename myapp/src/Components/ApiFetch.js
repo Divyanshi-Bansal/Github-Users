@@ -1,9 +1,10 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 
 export default function ApiFetch(){
 
-    const api = await fetch('https://api.github.com/users');
-    console.log(api);
+    useEffect(() => {
+        getUsers()
+    }, [])
 
     return(
         <React.Fragment>
