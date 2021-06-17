@@ -1,0 +1,25 @@
+.info-box{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+    padding: 10px;
+}
+
+.name{
+    color: grey;
+    font-size: 15px;
+    margin: 3px;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+}
+
+.number{
+    color: rgb(102, 102, 102);
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    margin: 5px;
+    justify-content: space-evenly;
+}
