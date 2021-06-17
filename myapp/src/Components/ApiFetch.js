@@ -4,8 +4,9 @@ import UserCard from './UserCard';
 export default function ApiFetch(){
 
     const getUsers = async() =>{
-        const response = fetch('https://api.github.com/users');
-        console.log(response);
+        const response = await fetch('https://api.github.com/users');
+        const data = await response.json()
+        console.log(data);
     }
 
     // while page reloading , it will call useeffect and this will call getusers function for updations.
