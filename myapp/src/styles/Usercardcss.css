@@ -1,10 +1,18 @@
 .card{
-    border: 1px solid black;
-    margin: 20px;
+    box-shadow: 2px 2px 3px lightcyan;
+    margin: 30px;
     width: 500px;
     display: flex;
     flex-direction: row;
     padding: 5px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.card:hover{
+    transition: .5s;
+    margin: 40px;
+    box-shadow: 2px 2px 3px lightcyan , -2px -2px 7px lightcyan;
 }
 
 .userimage{
@@ -24,6 +32,11 @@
     color: grey;
     font-weight: bold;
     margin: 9px;
+}
+
+.username:hover{
+    color: black;
+    font-style: oblique;
 }
 
 .name-below{
