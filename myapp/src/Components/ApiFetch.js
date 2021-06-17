@@ -1,13 +1,28 @@
-import React,{useEffect} from 'react';
+import React,{useEffect , useState} from 'react';
 import UserCard from './UserCard';
 
 export default function ApiFetch(){
 
-    const getUsers = async() =>{
-        const response = await fetch('https://api.github.com/users');
-        const data = await response.json()
-        console.log(data);
-    }
+    const [users , setUsers] = useState([]);
+    
+    const getUsers = () => {
+        fetch('https://api.github.com/users',
+        {
+          headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
+        }
+        )
+          .then(function(response){
+            // console.log(response)
+            return response.json();
+          })
+          .then(function(myJson) {
+            // console.log(myJson);
+            setUsers(myJson)
+          });
+      }
 
     // while page reloading , it will call useeffect and this will call getusers function for updations.
     useEffect(() => {
@@ -16,7 +31,7 @@ export default function ApiFetch(){
 
     return(
         <React.Fragment>
-            <UserCard/>
+            users.map()
         </React.Fragment>
     );
 }
