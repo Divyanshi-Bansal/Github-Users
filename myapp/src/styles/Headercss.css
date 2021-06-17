@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    border: 1px solid black;
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+}
+
+.github-logo svg{
+    color: white;
+    margin: 6px;
+    margin-left: 29px;
+}
+
+.search-box{
+    background-color: rgb(48, 48, 48);
+    color: white;
+    font-size: 20px;
+    padding: 7px;
+    margin: 10px;
+    margin-left: 19px;
+    border-style:solid;
+    border-radius: 10px;
+}
+
+.header-links{
+    color: white;
+    font-weight: normal;
+    padding: 7px;
+    margin: 10px;
+}
+
+.notisficationBell{
+    color: white;
+}
+
+.plus{
+    color: white;
+}
