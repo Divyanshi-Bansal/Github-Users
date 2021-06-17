@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './Components/header';
+import Header from './Components/Header';
 import UserCard from './Components/UserCard';
+import ApiFetch from './Components/ApiFetch';
 
 function App() {
   return (
     <div className='app'>
-      <Header/>
-      <UserCard/>
+      <ApiFetch/>
     </div>
   );
 }
