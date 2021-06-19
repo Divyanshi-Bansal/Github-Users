@@ -5,15 +5,9 @@ export default function ApiFetch(){
 
     const [users , setUsers] = useState([]);
     
-    const getUsers = () => {
-        fetch('https://api.github.com/users',
-        {
-          headers : { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          }
-        }
-        )
+    const fetchedUrl = 'https://api.github.com/users';
+    const getUsers = async (fetchedUrl) => {
+        await fetch(fetchedUrl)
           .then(function(response){
             // console.log(response)
             return response.json();
@@ -29,9 +23,17 @@ export default function ApiFetch(){
         getUsers()
     }, [])
 
+    console.log(users);
+
+    const filtered = Object.values(users).filter(() =>{
+      return getUsers(users.url)
+    })
+
     return(
         <React.Fragment>
-            users.map()
+            {filtered.map((data) => {
+                return <UserCard name = {data.name}/>
+            })}
         </React.Fragment>
     );
 }

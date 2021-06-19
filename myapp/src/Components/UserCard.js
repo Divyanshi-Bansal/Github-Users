@@ -6,7 +6,7 @@ export default function UserCard(props){
     return (
         <div className='card'>
             <div className='userimage'>
-                <img className='user-Image' src={props.url} alt='user github image'></img>
+                <img className='user-Image' src='' alt='user github image'></img>
             </div>
             <div className='user-about'>
                 <h2 className='username'>{props.name}</h2>
